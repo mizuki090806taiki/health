@@ -1,0 +1,2 @@
+class Seito < ApplicationRecord
+end

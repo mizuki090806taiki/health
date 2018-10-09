@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gakunenn_id: 1
+  banngou: 1
+  seibetu: MyString
+  simei: MyString
+
+two:
+  gakunenn_id: 1
+  banngou: 1
+  seibetu: MyString
+  simei: MyString

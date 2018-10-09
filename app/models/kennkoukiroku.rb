@@ -1,0 +1,2 @@
+class Kennkoukiroku < ApplicationRecord
+end
