@@ -1,0 +1,2 @@
+class Gakunenn < ApplicationRecord
+end

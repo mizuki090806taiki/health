@@ -1,0 +1,32 @@
+<%= form_with(model: gakunenn, local: true) do |form| %>
+  <% if gakunenn.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gakunenn.errors.count, "error") %> prohibited this gakunenn from being saved:</h2>
+
+      <ul>
+      <% gakunenn.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :gakunenn %>
+    <%= form.number_field :gakunenn, id: :gakunenn_gakunenn %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kumi %>
+    <%= form.number_field :kumi, id: :gakunenn_kumi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ninnzuu %>
+    <%= form.number_field :ninnzuu, id: :gakunenn_ninnzuu %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Byouketus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Riyuu</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @byouketus.each do |byouketu| %>
+      <tr>
+        <td><%= byouketu.riyuu %></td>
+        <td><%= link_to 'Show', byouketu %></td>
+        <td><%= link_to 'Edit', edit_byouketu_path(byouketu) %></td>
+        <td><%= link_to 'Destroy', byouketu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Byouketu', new_byouketu_path %>

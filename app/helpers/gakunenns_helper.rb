@@ -1,0 +1,2 @@
+module GakunennsHelper
+end

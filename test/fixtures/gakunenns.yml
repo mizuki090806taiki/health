@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gakunenn: 1
+  kumi: 1
+  ninnzuu: 1
+
+two:
+  gakunenn: 1
+  kumi: 1
+  ninnzuu: 1

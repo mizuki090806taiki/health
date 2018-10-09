@@ -1,0 +1,22 @@
+<%= form_with(model: tikoku, local: true) do |form| %>
+  <% if tikoku.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tikoku.errors.count, "error") %> prohibited this tikoku from being saved:</h2>
+
+      <ul>
+      <% tikoku.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :riyuu %>
+    <%= form.text_field :riyuu, id: :tikoku_riyuu %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

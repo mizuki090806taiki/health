@@ -1,0 +1,2 @@
+class Byouketu < ApplicationRecord
+end

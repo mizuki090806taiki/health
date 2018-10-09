@@ -1,0 +1,2 @@
+module TikokusHelper
+end
