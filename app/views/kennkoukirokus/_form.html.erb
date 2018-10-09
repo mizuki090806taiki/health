@@ -1,0 +1,62 @@
+<%= form_with(model: kennkoukiroku, local: true) do |form| %>
+  <% if kennkoukiroku.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kennkoukiroku.errors.count, "error") %> prohibited this kennkoukiroku from being saved:</h2>
+
+      <ul>
+      <% kennkoukiroku.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :hiduke %>
+    <%= form.date_select :hiduke, id: :kennkoukiroku_hiduke %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kesseki %>
+    <%= form.check_box :kesseki, id: :kennkoukiroku_kesseki %>
+  </div>
+
+  <div class="field">
+    <%= form.label :byouketu_id %>
+    <%= form.number_field :byouketu_id, id: :kennkoukiroku_byouketu_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zikoketu %>
+    <%= form.text_field :zikoketu, id: :kennkoukiroku_zikoketu %>
+  </div>
+
+  <div class="field">
+    <%= form.label :syuttei %>
+    <%= form.text_field :syuttei, id: :kennkoukiroku_syuttei %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tikoku_id %>
+    <%= form.text_field :tikoku_id, id: :kennkoukiroku_tikoku_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kibiki %>
+    <%= form.text_field :kibiki, id: :kennkoukiroku_kibiki %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gakunenn_id %>
+    <%= form.number_field :gakunenn_id, id: :kennkoukiroku_gakunenn_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seito_id %>
+    <%= form.number_field :seito_id, id: :kennkoukiroku_seito_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

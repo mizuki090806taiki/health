@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gakunenn:</strong>
+  <%= @seito.gakunenn_id %>
+</p>
+
+<p>
+  <strong>Banngou:</strong>
+  <%= @seito.banngou %>
+</p>
+
+<p>
+  <strong>Seibetu:</strong>
+  <%= @seito.seibetu %>
+</p>
+
+<p>
+  <strong>Simei:</strong>
+  <%= @seito.simei %>
+</p>
+
+<%= link_to 'Edit', edit_seito_path(@seito) %> |
+<%= link_to 'Back', seitos_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Seitos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gakunenn</th>
+      <th>Banngou</th>
+      <th>Seibetu</th>
+      <th>Simei</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @seitos.each do |seito| %>
+      <tr>
+        <td><%= seito.gakunenn_id %></td>
+        <td><%= seito.banngou %></td>
+        <td><%= seito.seibetu %></td>
+        <td><%= seito.simei %></td>
+        <td><%= link_to 'Show', seito %></td>
+        <td><%= link_to 'Edit', edit_seito_path(seito) %></td>
+        <td><%= link_to 'Destroy', seito, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Seito', new_seito_path %>

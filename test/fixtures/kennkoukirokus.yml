@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hiduke: 2018-10-09
+  kesseki: false
+  byouketu_id: 1
+  zikoketu: MyString
+  syuttei: MyString
+  tikoku_id: MyString
+  kibiki: MyString
+  gakunenn_id: 1
+  seito_id: 1
+
+two:
+  hiduke: 2018-10-09
+  kesseki: false
+  byouketu_id: 1
+  zikoketu: MyString
+  syuttei: MyString
+  tikoku_id: MyString
+  kibiki: MyString
+  gakunenn_id: 1
+  seito_id: 1

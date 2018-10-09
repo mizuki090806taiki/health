@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kennkoukirokus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hiduke</th>
+      <th>Kesseki</th>
+      <th>Byouketu</th>
+      <th>Zikoketu</th>
+      <th>Syuttei</th>
+      <th>Tikoku</th>
+      <th>Kibiki</th>
+      <th>Gakunenn</th>
+      <th>Seito</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kennkoukirokus.each do |kennkoukiroku| %>
+      <tr>
+        <td><%= kennkoukiroku.hiduke %></td>
+        <td><%= kennkoukiroku.kesseki %></td>
+        <td><%= kennkoukiroku.byouketu_id %></td>
+        <td><%= kennkoukiroku.zikoketu %></td>
+        <td><%= kennkoukiroku.syuttei %></td>
+        <td><%= kennkoukiroku.tikoku_id %></td>
+        <td><%= kennkoukiroku.kibiki %></td>
+        <td><%= kennkoukiroku.gakunenn_id %></td>
+        <td><%= kennkoukiroku.seito_id %></td>
+        <td><%= link_to 'Show', kennkoukiroku %></td>
+        <td><%= link_to 'Edit', edit_kennkoukiroku_path(kennkoukiroku) %></td>
+        <td><%= link_to 'Destroy', kennkoukiroku, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kennkoukiroku', new_kennkoukiroku_path %>
