@@ -1,3 +1,4 @@
 class Comment < ApplicationRecord
- belongs_to :kennkoukiroku 
+ 
+ validates :comment, presence:true
 end

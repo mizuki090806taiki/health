@@ -17,20 +17,6 @@ ActiveRecord::Schema.define(version: 20181009011602) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-      
-  create_table "kennkoukirokus", force: :cascade do |t|
-    t.date "hiduke"
-    t.boolean "kesseki"
-    t.integer "byouketu_id"
-    t.string "zikoketu"
-    t.string "syuttei"
-    t.string "tikoku_id"
-    t.string "kibiki"
-    t.integer "gakunenn_id"
-    t.integer "seito_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "comments", force: :cascade do |t|
     t.text "comment"
@@ -47,8 +33,16 @@ ActiveRecord::Schema.define(version: 20181009011602) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tikokus", force: :cascade do |t|
-    t.string "riyuu"
+  create_table "kennkoukirokus", force: :cascade do |t|
+    t.date "hiduke"
+    t.boolean "kesseki"
+    t.integer "byouketu_id"
+    t.string "zikoketu"
+    t.string "syuttei"
+    t.string "tikoku_id"
+    t.string "kibiki"
+    t.integer "gakunenn_id"
+    t.integer "seito_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -58,6 +52,12 @@ ActiveRecord::Schema.define(version: 20181009011602) do
     t.integer "banngou"
     t.string "seibetu"
     t.string "simei"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tikokus", force: :cascade do |t|
+    t.string "riyuu"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
