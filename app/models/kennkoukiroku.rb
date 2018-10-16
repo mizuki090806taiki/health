@@ -1,5 +1,4 @@
 class Kennkoukiroku < ApplicationRecord
- has_many :comments
  belongs_to :byouketu,optional: true
  belongs_to :tikoku,optional: true
  belongs_to :gakunenn

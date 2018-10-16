@@ -1,6 +1,8 @@
 class Gakunenn < ApplicationRecord
  has_many :seitos
  has_many :kennkoukirokus
+ has_many :comments
+
 
  validates :gakunenn, presence:true
  validates :gakunenn, numericality: { greater_than_or_equal_to: 0 }

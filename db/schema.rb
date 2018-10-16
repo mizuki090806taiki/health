@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(version: 20181009011602) do
 
   create_table "comments", force: :cascade do |t|
     t.text "comment"
-    t.integer "kennkoukiroku_id"
+    t.date "hiduke"
+    t.integer "gakunenn_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(version: 20181009011602) do
     t.integer "gakunenn"
     t.integer "kumi"
     t.integer "ninnzuu"
+    t.integer "nenndo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
