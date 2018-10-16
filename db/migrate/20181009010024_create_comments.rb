@@ -2,7 +2,8 @@ class CreateComments < ActiveRecord::Migration[5.1]
   def change
     create_table :comments do |t|
       t.text :comment
-      t.integer :kennkoukiroku_id
+      t.date :hiduke
+      t.integer :gakunenn_id
 
       t.timestamps
     end

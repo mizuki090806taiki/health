@@ -4,6 +4,7 @@ class CreateGakunenns < ActiveRecord::Migration[5.1]
       t.integer :gakunenn
       t.integer :kumi
       t.integer :ninnzuu
+      t.integer :nenndo
 
       t.timestamps
     end
