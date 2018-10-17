@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Gakunenn:</strong>
+  <strong>学年:</strong>
   <%= @seito.gakunenn_id %>
 </p>
 
 <p>
-  <strong>Banngou:</strong>
+  <strong>番号:</strong>
   <%= @seito.banngou %>
 </p>
 
 <p>
-  <strong>Seibetu:</strong>
+  <strong>性別:</strong>
   <%= @seito.seibetu %>
 </p>
 
 <p>
-  <strong>Simei:</strong>
+  <strong>氏名:</strong>
   <%= @seito.simei %>
 </p>
 
-<%= link_to 'Edit', edit_seito_path(@seito) %> |
-<%= link_to 'Back', seitos_path %>
+<%= link_to '編集', edit_seito_path(@seito) %> |
+<%= link_to '戻る', seitos_path %>
