@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Tikokus</h1>
+<h1>遅刻理由</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Riyuu</th>
+      <th>遅刻理由</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,9 +14,9 @@
     <% @tikokus.each do |tikoku| %>
       <tr>
         <td><%= tikoku.riyuu %></td>
-        <td><%= link_to 'Show', tikoku %></td>
-        <td><%= link_to 'Edit', edit_tikoku_path(tikoku) %></td>
-        <td><%= link_to 'Destroy', tikoku, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '参照', tikoku %></td>
+        <td><%= link_to '編集', edit_tikoku_path(tikoku) %></td>
+        <td><%= link_to '削除', tikoku, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Tikoku', new_tikoku_path %>
+<%= link_to '遅刻理由追加', new_tikoku_path %>
