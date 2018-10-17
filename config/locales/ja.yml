@@ -1,0 +1,49 @@
+ja:
+  activerecord:
+    models:
+      seito: 生徒
+      kennkoukiroku: 健康記録
+      gakunenn: 学年
+      byouketu: 病欠理由
+      tikoku: 遅刻理由
+      comment: コメント
+
+    attributes:
+      seito:
+        gakunenn_id: 学年
+        banngou: 番号
+        seibetu: 性別
+        simei: 氏名
+
+      kennkoukiroku:
+        hiduke: 日付
+        kesseki: 欠席
+        byouketu_id: 病欠
+        zikoketu: 事故欠
+        syuttei: 出席停止
+        tikoku_id: 遅刻
+        kibiki: 忌引
+        gakunenn_id: 学年
+        seito_id: 生徒
+
+      gakunenn:
+        nenndo: 年度
+        gakunenn: 学年
+        kumi: 組
+        ninnzuu: クラス人数
+
+      byouketu:
+        riyuu: 理由名称
+
+      tikoku:
+        riyuu: 理由名称
+
+      comennt: 
+        comment: コメント
+        hiduke: 日付
+        gakunenn_id: 学年
+        
+
+
+      
+  
