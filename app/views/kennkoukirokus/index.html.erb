@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Kennkoukirokus</h1>
+<h1>健康記録</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Hiduke</th>
-      <th>Kesseki</th>
-      <th>Byouketu</th>
-      <th>Zikoketu</th>
-      <th>Syuttei</th>
-      <th>Tikoku</th>
-      <th>Kibiki</th>
-      <th>Gakunenn</th>
-      <th>Seito</th>
+      <th>日付</th>
+      <th>欠席</th>
+      <th>病欠</th>
+      <th>事故欠</th>
+      <th>出席停止</th>
+      <th>遅刻</th>
+      <th>忌引</th>
+      <th>学年</th>
+      <th>生徒</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,9 +30,9 @@
         <td><%= kennkoukiroku.kibiki %></td>
         <td><%= kennkoukiroku.gakunenn_id %></td>
         <td><%= kennkoukiroku.seito_id %></td>
-        <td><%= link_to 'Show', kennkoukiroku %></td>
-        <td><%= link_to 'Edit', edit_kennkoukiroku_path(kennkoukiroku) %></td>
-        <td><%= link_to 'Destroy', kennkoukiroku, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '参照', kennkoukiroku %></td>
+        <td><%= link_to '編集', edit_kennkoukiroku_path(kennkoukiroku) %></td>
+        <td><%= link_to '削除', kennkoukiroku, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +40,4 @@
 
 <br>
 
-<%= link_to 'New Kennkoukiroku', new_kennkoukiroku_path %>
+<%= link_to '健康記録追加', new_kennkoukiroku_path %>

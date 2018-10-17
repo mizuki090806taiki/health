@@ -12,47 +12,47 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :hiduke %>
+    <%= form.label :日付 %>
     <%= form.date_select :hiduke, id: :kennkoukiroku_hiduke %>
   </div>
 
   <div class="field">
-    <%= form.label :kesseki %>
+    <%= form.label :欠席 %>
     <%= form.check_box :kesseki, id: :kennkoukiroku_kesseki %>
   </div>
 
   <div class="field">
-    <%= form.label :byouketu_id %>
+    <%= form.label :病欠 %>
     <%= form.number_field :byouketu_id, id: :kennkoukiroku_byouketu_id %>
   </div>
 
   <div class="field">
-    <%= form.label :zikoketu %>
+    <%= form.label :事故欠 %>
     <%= form.text_field :zikoketu, id: :kennkoukiroku_zikoketu %>
   </div>
 
   <div class="field">
-    <%= form.label :syuttei %>
+    <%= form.label :出席停止 %>
     <%= form.text_field :syuttei, id: :kennkoukiroku_syuttei %>
   </div>
 
   <div class="field">
-    <%= form.label :tikoku_id %>
+    <%= form.label :遅刻 %>
     <%= form.text_field :tikoku_id, id: :kennkoukiroku_tikoku_id %>
   </div>
 
   <div class="field">
-    <%= form.label :kibiki %>
+    <%= form.label :忌引 %>
     <%= form.text_field :kibiki, id: :kennkoukiroku_kibiki %>
   </div>
 
   <div class="field">
-    <%= form.label :gakunenn_id %>
+    <%= form.label :学年 %>
     <%= form.number_field :gakunenn_id, id: :kennkoukiroku_gakunenn_id %>
   </div>
 
   <div class="field">
-    <%= form.label :seito_id %>
+    <%= form.label :生徒 %>
     <%= form.number_field :seito_id, id: :kennkoukiroku_seito_id %>
   </div>
 
