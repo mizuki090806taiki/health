@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Gakunenns</h1>
+<h1>学年</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Gakunenn</th>
-      <th>Kumi</th>
-      <th>Ninnzuu</th>
+      <th>学年</th>
+      <th>組</th>
+      <th>クラス人数</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +18,9 @@
         <td><%= gakunenn.gakunenn %></td>
         <td><%= gakunenn.kumi %></td>
         <td><%= gakunenn.ninnzuu %></td>
-        <td><%= link_to 'Show', gakunenn %></td>
-        <td><%= link_to 'Edit', edit_gakunenn_path(gakunenn) %></td>
-        <td><%= link_to 'Destroy', gakunenn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '参照', gakunenn %></td>
+        <td><%= link_to '編集', edit_gakunenn_path(gakunenn) %></td>
+        <td><%= link_to '削除', gakunenn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Gakunenn', new_gakunenn_path %>
+<%= link_to '学年追加', new_gakunenn_path %>
