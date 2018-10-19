@@ -2,7 +2,7 @@
 
 <p>
   <strong>学年:</strong>
-  <%= @seito.gakunenn_id %>
+  <%= @seito.gakunenn.nenndo.to_s + "年度" + @seito.gakunenn.gakunenn.to_s + "年" + @seito.gakunenn.kumi.to_s + "組"  %>
 </p>
 
 <p>

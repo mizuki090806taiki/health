@@ -5,7 +5,9 @@
 <table>
   <thead>
     <tr>
+      <th>年度</th>
       <th>学年</th>
+      <th>組</th>
       <th>番号</th>
       <th>性別</th>
       <th>氏名</th>
@@ -16,7 +18,9 @@
   <tbody>
     <% @seitos.each do |seito| %>
       <tr>
-        <td><%= seito.gakunenn_id %></td>
+        <td><%= seito.gakunenn.nenndo %></td>
+        <td><%= seito.gakunenn.gakunenn %></td>
+        <td><%= seito.gakunenn.kumi %></td>
         <td><%= seito.banngou %></td>
         <td><%= seito.seibetu %></td>
         <td><%= seito.simei %></td>
