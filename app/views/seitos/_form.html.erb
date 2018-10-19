@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :'学年' %>
-    <%= form.number_field :gakunenn_id, id: :seito_gakunenn_id %>
+    <%=  form.select :gakunenn_id, Gakunenn.all.map {|g| [g.nenndo.to_s + "年度" +  g.gakunenn.to_s + "年" + g.kumi.to_s + "組",g.id] } %>
   </div>
 
   <div class="field">
