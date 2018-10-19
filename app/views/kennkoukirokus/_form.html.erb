@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :病欠 %>
-    <%= form.number_field :byouketu_id, id: :kennkoukiroku_byouketu_id %>
+    <%= form.select :byouketu_id, Byouketu.all.map { |b| [b.riyuu, b.id] } %>
   </div>
 
   <div class="field">
@@ -38,7 +38,7 @@
 
   <div class="field">
     <%= form.label :遅刻 %>
-    <%= form.text_field :tikoku_id, id: :kennkoukiroku_tikoku_id %>
+    <%= form.select :tikoku_id, Tikoku.all.map { |t| [t.riyuu, t.id] } %>
   </div>
 
   <div class="field">
@@ -48,12 +48,12 @@
 
   <div class="field">
     <%= form.label :学年 %>
-    <%= form.number_field :gakunenn_id, id: :kennkoukiroku_gakunenn_id %>
+    <%= form.select :gakunenn_id, Gakunenn.all.map { |g| [g.nenndo.to_s + "年度" + g.gakunenn.to_s + "年" + g.kumi.to_s + "組" ,g.id] } %>
   </div>
 
   <div class="field">
     <%= form.label :生徒 %>
-    <%= form.number_field :seito_id, id: :kennkoukiroku_seito_id %>
+    <%= form.select :seito_id, Seito.all.map { |s| [ s.banngou.to_s + s.simei, s.id] } %>
   </div>
 
   <div class="actions">
