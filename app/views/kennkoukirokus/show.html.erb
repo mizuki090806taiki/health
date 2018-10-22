@@ -12,7 +12,11 @@
 
 <p>
   <strong>病欠:</strong>
-  <%= @kennkoukiroku.byouketu_id %>
+  <% if @kennkoukiroku.byouketu_id.present? %>
+  <td><%= @kennkoukiroku.byouketu.riyuu %></td>
+  <% else %>
+  <td></td>
+ <% end %>
 </p>
 
 <p>
@@ -27,7 +31,11 @@
 
 <p>
   <strong>遅刻:</strong>
-  <%= @kennkoukiroku.tikoku_id %>
+  <% if @kennkoukiroku.tikoku_id.present? %>
+  <td><%= @kennkoukiroku.tikoku.riyuu %></td>
+  <% else %>
+  <td></td>
+ <% end %>
 </p>
 
 <p>
@@ -37,12 +45,12 @@
 
 <p>
   <strong>学年:</strong>
-  <%= @kennkoukiroku.gakunenn_id %>
+  <%= @kennkoukiroku.gakunenn.nenndo.to_s + "年度" + @kennkoukiroku.gakunenn.gakunenn.to_s + "年" + @kennkoukiroku.gakunenn.kumi.to_s + "組"  %>
 </p>
 
 <p>
   <strong>生徒:</strong>
-  <%= @kennkoukiroku.seito_id %>
+  <%= @kennkoukiroku.seito.simei %>
 </p>
 
 <%= link_to '編集', edit_kennkoukiroku_path(@kennkoukiroku) %> |
