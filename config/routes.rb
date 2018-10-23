@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+#get 'kennkoukiroku_makerecord/new'
+  resources :kennkoukiroku_makerecord
+
   get 'home/top'
 
   resources :comments
