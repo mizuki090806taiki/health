@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :病欠 %>
-    <%= form.select :byouketu_id, Byouketu.all.map { |b| [b.riyuu, b.id] } %>
+    <%= form.select :byouketu_id, Byouketu.all.map { |b| [b.riyuu, b.id] },{include_blank: true} %>
   </div>
 
   <div class="field">
@@ -38,7 +38,7 @@
 
   <div class="field">
     <%= form.label :遅刻 %>
-    <%= form.select :tikoku_id, Tikoku.all.map { |t| [t.riyuu, t.id] } %>
+    <%= form.select :tikoku_id, Tikoku.all.map { |t| [t.riyuu, t.id] },{include_blank: true} %>
   </div>
 
   <div class="field">
