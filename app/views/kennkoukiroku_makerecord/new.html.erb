@@ -1,0 +1,14 @@
+<h1>KennkoukirokuMakerecord#new</h1>
+<p>Find me in app/views/kennkoukiroku_makerecord/new.html.erb</p>
+
+<%= form_tag("/kennkoukiroku_makerecord",method:"post") do %>
+  <div class="field">
+    <%= label_tag "年度を指定してください" %>
+    <%= date_select :kennkoukiroku_makerecord, :nenndo, discard_day: true, discard_month: true %>
+   </div>
+
+   <div class="actions">
+     <%= submit_tag "まとめて作成",data: { confirm: 'まとめて作成しますけどよろしいですか？'} %>
+   </div>
+   <% end %>
+  
