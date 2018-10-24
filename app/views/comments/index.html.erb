@@ -6,6 +6,9 @@
   <thead>
     <tr>
       <th>コメント</th>
+      <th>日付</th>
+      <th>学年</th>
+      <th>組</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +17,9 @@
     <% @comments.each do |comment| %>
       <tr>
         <td><%= comment.comment %></td>
+        <td><%= comment.hiduke %></td>
+        <td><%= comment.gakunenn.gakunenn %></td>
+        <td><%= comment.gakunenn.kumi %></td>
         <td><%= link_to '参照', comment %></td>
         <td><%= link_to '編集', edit_comment_path(comment) %></td>
         <td><%= link_to '削除', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

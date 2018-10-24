@@ -5,6 +5,21 @@
   <%= @comment.comment %>
 </p>
 
+<p>
+<strong>日付:</strong>
+<%= @comment.hiduke %>
+</p>
+
+<p>
+<strong>学年:</strong>
+<%= @comment.gakunenn.gakunenn %>
+</p>
+
+<p>
+<strong>組:</strong>
+<%= @comment.gakunenn.kumi %>
+</p>
+
 
 
 <%= link_to '編集', edit_comment_path(@comment) %> |

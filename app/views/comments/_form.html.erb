@@ -17,9 +17,16 @@
   </div>
 
   <div class="field">
-    <%= form.label :健康記録 %>
-    <%= form.number_field :kennkoukiroku_id, id: :comment_kennkoukiroku_id %>
+  <%= form.label :日付 %>
+  <%= form.date_select :hiduke, id: :comments_hiduke %>
+</div>
+
+
+  <div class="field">
+    <%= form.label :学年 %>
+    <%= form.select :gakunenn_id, Gakunenn.all.map {|g| [g.gakunenn.to_s + "年" + g.kumi.to_s + "組",g.id] } %>
   </div>
+
 
   <div class="actions">
     <%= form.submit %>
