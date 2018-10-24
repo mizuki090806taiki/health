@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Kennkoukiroku.delete_all
+Kennkoukiroku.connection.execute("delete from sqlite_sequence where name='kennkoukirokus'")
+
 Gakunenn.delete_all
 Gakunenn.connection.execute("delete from sqlite_sequence where name='gakunenns'")
 Gakunenn.create(nenndo: 2018,gakunenn: 3,kumi: 1,ninnzuu:20)
