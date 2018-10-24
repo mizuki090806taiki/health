@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :年度 %>
+    <%= form.number_field :nenndo, id: :gakunenn_nenndo %>
+  </div>
+
+  <div class="field">
     <%= form.label :学年 %>
     <%= form.number_field :gakunenn, id: :gakunenn_gakunenn %>
   </div>

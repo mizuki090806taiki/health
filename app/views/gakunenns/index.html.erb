@@ -5,6 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>年度</th>
       <th>学年</th>
       <th>組</th>
       <th>クラス人数</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @gakunenns.each do |gakunenn| %>
       <tr>
+     　 <td><%= gakunenn.nenndo %></td>
         <td><%= gakunenn.gakunenn %></td>
         <td><%= gakunenn.kumi %></td>
         <td><%= gakunenn.ninnzuu %></td>

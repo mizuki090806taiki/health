@@ -69,6 +69,6 @@ class GakunennsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gakunenn_params
-      params.require(:gakunenn).permit(:gakunenn, :kumi, :ninnzuu)
+      params.require(:gakunenn).permit(:nenndo, :gakunenn, :kumi, :ninnzuu)
     end
 end
