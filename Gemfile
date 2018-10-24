@@ -50,4 +50,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'coffee-script-source', '1.8.0'
 gem 'rails-i18n'
+gem 'bootstrap-sass', '3.3.7'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'jquery-turbolinks'
