@@ -4,7 +4,11 @@ class KennkoukirokusController < ApplicationController
   # GET /kennkoukirokus
   # GET /kennkoukirokus.json
   def index
-    @kennkoukirokus = Kennkoukiroku.all
+   if session[:kennkoukiroku_search_gakunenn] == nil
+    @kennkoukirokus = {}
+   else
+    @kennkoukirokus = Kennkoukiroku.where("gakunenn_id = ?", session[:kennkoukiroku_search_gakunenn])
+   end
   end
 
   # GET /kennkoukirokus/1
@@ -59,6 +63,16 @@ class KennkoukirokusController < ApplicationController
       format.html { redirect_to kennkoukirokus_url, notice: 'Kennkoukiroku was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def search
+      if params[:kennkoukiroku_search][:gakunenn].present?
+         session[:kennkoukiroku_search_gakunenn] =  params[:kennkoukiroku_search][:gakunenn]
+
+      else
+         session[:kennkoukiroku_search_gakunenn] = nil
+      end
+       redirect_to kennkoukirokus_path
   end
 
   private

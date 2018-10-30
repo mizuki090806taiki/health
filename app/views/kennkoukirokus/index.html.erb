@@ -2,6 +2,15 @@
 
 <h1>健康記録</h1>
 
+<%= form_tag('/kennkoukirokus_search') do %>
+  <p>
+  学年
+  <br>
+  <%= select_tag 'kennkoukiroku_search[:gakunenn]', options_for_select(Gakunenn.all.map { |g| [g.nenndo.to_s + "年度" + g.gakunenn.to_s + "年" + g.kumi.to_s + "組" ,g.id] }) %>
+  <%= submit_tag '検索' %>
+  </p>
+<% end %>
+
 <table class="table table-striped">
   <thead>
     <tr>

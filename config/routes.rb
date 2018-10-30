@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   resources :kennkoukirokus
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root :to => 'home#top'
+
+  post '/kennkoukirokus_search', to: 'kennkoukirokus#search'
 end
