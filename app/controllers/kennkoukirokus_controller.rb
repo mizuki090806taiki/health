@@ -4,10 +4,20 @@ class KennkoukirokusController < ApplicationController
   # GET /kennkoukirokus
   # GET /kennkoukirokus.json
   def index
-   if session[:kennkoukiroku_search_gakunenn] == nil
-    @kennkoukirokus = {}
-   else
-    @kennkoukirokus = Kennkoukiroku.where("gakunenn_id = ?", session[:kennkoukiroku_search_gakunenn])
+    @hiduke = Date.today
+    if params[:select_date].present?
+     @hiduke = Date.parse( params[:select_date])
+    else  
+     @hiduke = Date.today
+    end
+
+    week = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
+    @youbi = week[@hiduke.wday]
+    
+    if session[:kennkoukiroku_search_gakunenn] == nil
+     @kennkoukirokus = {}
+    else
+     @kennkoukirokus = Kennkoukiroku.where("gakunenn_id = ? and hiduke = ? ", session[:kennkoukiroku_search_gakunenn],@hiduke)
    end
   end
 
@@ -67,12 +77,11 @@ class KennkoukirokusController < ApplicationController
 
   def search
       if params[:kennkoukiroku_search][:gakunenn].present?
-         session[:kennkoukiroku_search_gakunenn] =  params[:kennkoukiroku_search][:gakunenn]
-
+         session[:kennkoukiroku_search_gakunenn] = params[:kennkoukiroku_search][:gakunenn]
       else
          session[:kennkoukiroku_search_gakunenn] = nil
       end
-       redirect_to kennkoukirokus_path
+      redirect_to kennkoukirokus_path
   end
 
   private

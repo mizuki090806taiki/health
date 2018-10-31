@@ -6,10 +6,21 @@
   <p>
   学年
   <br>
-  <%= select_tag 'kennkoukiroku_search[:gakunenn]', options_for_select(Gakunenn.all.map { |g| [g.nenndo.to_s + "年度" + g.gakunenn.to_s + "年" + g.kumi.to_s + "組" ,g.id] }) %>
+  <%= select_tag 'kennkoukiroku_search[gakunenn]', options_for_select(Gakunenn.all.map { |g| [g.nenndo.to_s + "年度" + g.gakunenn.to_s + "年" + g.kumi.to_s + "組" ,g.id] }) %>
   <%= submit_tag '検索' %>
   </p>
 <% end %>
+<table class="table">
+<tr>
+     <td><%= link_to "前日", kennkoukirokus_path(select_date: @hiduke-1) %></td>
+     <td align="center", style="font-size : 25px;"><%= @hiduke %><%= @youbi %></td>
+     <td><%= link_to "今日に戻る", kennkoukirokus_path %></td>
+     <td align="right"><%= link_to "翌日", kennkoukirokus_path(select_date: @hiduke+1) %></td>
+
+</tr>
+
+</table>
+ 
 
 <table class="table table-striped">
   <thead>
