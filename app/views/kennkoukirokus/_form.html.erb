@@ -23,37 +23,37 @@
 
   <div class="field">
     <%= form.label :病欠 %>
-    <%= form.select :byouketu_id, Byouketu.all.map { |b| [b.riyuu, b.id] },{include_blank: true} %>
+    <%= form.select :byouketu_id, Byouketu.all.map { |b| [b.riyuu, b.id] },{include_blank: true},{class: "form-control" } %>
   </div>
 
   <div class="field">
     <%= form.label :事故欠 %>
-    <%= form.text_field :zikoketu, id: :kennkoukiroku_zikoketu %>
+    <%= form.text_field :zikoketu, {id: :kennkoukiroku_zikoketu,class: "form-control"} %>
   </div>
 
   <div class="field">
     <%= form.label :出席停止 %>
-    <%= form.text_field :syuttei, id: :kennkoukiroku_syuttei %>
+    <%= form.text_field :syuttei, {id: :kennkoukiroku_syuttei,class: "form-control"} %>
   </div>
 
   <div class="field">
     <%= form.label :遅刻 %>
-    <%= form.select :tikoku_id, Tikoku.all.map { |t| [t.riyuu, t.id] },{include_blank: true} %>
+    <%= form.select :tikoku_id, Tikoku.all.map { |t| [t.riyuu, t.id] },{include_blank: true},{class: "form-control" } %>
   </div>
 
   <div class="field">
     <%= form.label :忌引 %>
-    <%= form.text_field :kibiki, id: :kennkoukiroku_kibiki %>
+    <%= form.text_field :kibiki, {id: :kennkoukiroku_kibiki,class: "form-control"} %>
   </div>
 
   <div class="field">
     <%= form.label :学年 %>
-    <%= form.select :gakunenn_id, Gakunenn.all.map { |g| [g.nenndo.to_s + "年度" + g.gakunenn.to_s + "年" + g.kumi.to_s + "組" ,g.id] } %>
+    <%= form.select :gakunenn_id, Gakunenn.all.map { |g| [g.nenndo.to_s + "年度" + g.gakunenn.to_s + "年" + g.kumi.to_s + "組" ,g.id] },{}, {class: "form-control"} %>
   </div>
 
   <div class="field">
     <%= form.label :生徒 %>
-    <%= form.select :seito_id, Seito.all.map { |s| [ s.banngou.to_s + s.simei, s.id] } %>
+    <%= form.select :seito_id, Seito.all.map { |s| [ s.banngou.to_s + s.simei, s.id] },{}, {class: "form-control"} %>
   </div>
 
   <div class="actions">

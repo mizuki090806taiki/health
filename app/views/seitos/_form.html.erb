@@ -13,22 +13,22 @@
 
   <div class="field">
     <%= form.label :'学年' %>
-    <%=  form.select :gakunenn_id, Gakunenn.all.map {|g| [g.nenndo.to_s + "年度" +  g.gakunenn.to_s + "年" + g.kumi.to_s + "組",g.id] } %>
+    <%=  form.select :gakunenn_id, Gakunenn.all.map {|g| [g.nenndo.to_s + "年度" +  g.gakunenn.to_s + "年" + g.kumi.to_s + "組",g.id] },{}, {class: "form-control"} %>
   </div>
 
   <div class="field">
     <%= form.label :'番号' %>
-    <%= form.number_field :banngou, id: :seito_banngou %>
+    <%= form.number_field :banngou, {id: :seito_banngou,class: "form-control"} %>
   </div>
 
   <div class="field">
     <%= form.label :'性別' %>
-    <%= form.select :seibetu, [["男", "男"], ["女", "女"]] %>
+    <%= form.select :seibetu, [["男", "男"], ["女", "女"]],{}, {class: "form-control"} %>
   </div>
 
   <div class="field">
     <%= form.label :'氏名' %>
-    <%= form.text_field :simei, id: :seito_simei %>
+    <%= form.text_field :simei, {id: :seito_simei,class: "form-control"} %>
   </div>
 
   <div class="actions">

@@ -13,9 +13,9 @@
 
   <div class="field">
     <%= form.label :コメント %>
-    <%= form.text_area :comment, id: :comment_comment %>
+    <%= form.text_area :comment, {id: :comment_comment,class: "form-control", :placeholder => "コメントを入力"} %>
   </div>
-
+    
   <div class="field">
   <%= form.label :日付 %>
   <%= form.date_select :hiduke, id: :comments_hiduke %>
@@ -24,7 +24,7 @@
 
   <div class="field">
     <%= form.label :学年 %>
-    <%= form.select :gakunenn_id, Gakunenn.all.map {|g| [g.gakunenn.to_s + "年" + g.kumi.to_s + "組",g.id] } %>
+    <%= form.select :gakunenn_id, Gakunenn.all.map {|g| [g.gakunenn.to_s + "年" + g.kumi.to_s + "組",g.id] },{}, {class: "form-control"} %>
   </div>
 
 
