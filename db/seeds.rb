@@ -62,8 +62,13 @@ Seito.create(gakunenn_id: 4,banngou: 3408,seibetu: "男",simei: "吉田　健司
 Seito.create(gakunenn_id: 4,banngou: 3409,seibetu: "女",simei: "武藤　香")
 Seito.create(gakunenn_id: 4,banngou: 3410,seibetu: "男",simei: "鳥居　虎太郎")
 
-
-
+User.delete_all
+User.connection.execute("delete from sqlite_sequence where name='users'")
+User.create(name: "養護　太郎",banngou: 9999,password: "9999",password_confirmation: "9999",kengen: 1)
+User.create(name: "担任　太郎",banngou: 8888,password: "8888",password_confirmation: "8888",kengen: 2)
+User.create(name: "相田　恵一",banngou: 3101,password: "3101",password_confirmation: "3101",kengen: 3)
+User.create(name: "岩間　裕子",banngou: 3404,password: "3404",password_confirmation: "3404",kengen: 3)
+User.create(name: "吉田　健司",banngou: 3408,password: "3408",password_confirmation: "3408",kengen: 3)
 
 
 
