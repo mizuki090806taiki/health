@@ -50,7 +50,11 @@
         <td><%= kennkoukiroku.seito.banngou %></td>
         <td><%= kennkoukiroku.seito.seibetu %></td>
         <td><%= kennkoukiroku.seito.simei %></td>
-        <td><%= kennkoukiroku.kesseki %></td>
+       <% if kennkoukiroku.kesseki == true %>
+        <td><%= "〇" %></td>
+        <% else %>
+        <td><%= "✖" %></td>
+      <% end %>
        <% if kennkoukiroku.byouketu_id.present? %>
         <td><%= kennkoukiroku.byouketu.riyuu %></td>
         <% else %>
@@ -66,7 +70,7 @@
         <td><%= kennkoukiroku.kibiki %></td>
         <td><%= link_to '参照', kennkoukiroku %></td>
         <td><%= link_to '編集', edit_kennkoukiroku_path(kennkoukiroku) %></td>
-        <td><%= link_to '削除', kennkoukiroku, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '削除', kennkoukiroku, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
       </tr>
     <% end %>
   </tbody>

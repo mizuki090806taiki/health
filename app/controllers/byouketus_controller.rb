@@ -28,7 +28,7 @@ class ByouketusController < ApplicationController
 
     respond_to do |format|
       if @byouketu.save
-        format.html { redirect_to @byouketu, notice: 'Byouketu was successfully created.' }
+        format.html { redirect_to @byouketu, notice: "病欠理由を追加しました" }
         format.json { render :show, status: :created, location: @byouketu }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ByouketusController < ApplicationController
   def update
     respond_to do |format|
       if @byouketu.update(byouketu_params)
-        format.html { redirect_to @byouketu, notice: 'Byouketu was successfully updated.' }
+        format.html { redirect_to @byouketu, notice: "病欠理由を更新しました" }
         format.json { render :show, status: :ok, location: @byouketu }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ByouketusController < ApplicationController
   def destroy
     @byouketu.destroy
     respond_to do |format|
-      format.html { redirect_to byouketus_url, notice: 'Byouketu was successfully destroyed.' }
+      format.html { redirect_to byouketus_url, notice: "病欠理由を削除しました" }
       format.json { head :no_content }
     end
   end

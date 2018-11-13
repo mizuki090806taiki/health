@@ -1,6 +1,17 @@
-<p id="notice"><%= notice %></p>
 
 <h1>生徒</h1>
+<%= form_tag("/seito_gakunenn_select",method:"post") do %>
+  <div class="field">
+    <%= label_tag "年度を指定してください" %>
+    <%= date_select :seito_gakunenn_select, :nenndo, discard_day: true, discard_month: true, selected: Date.new(@nenndo.to_i,1,1) %> <%= submit_tag "年度決定" %>
+   </div>
+   <% end %>
+
+<ul>
+<% @gakunenns.each do |gakunenn| %>
+  <li><%= link_to "#{gakunenn.gakunenn.to_s}年#{gakunenn.kumi.to_s}組",seitos_path(gakunenn_id:gakunenn.id) %>
+<% end %>
+</ul>
 
 <table class="table table-striped">
   <thead>
@@ -26,7 +37,7 @@
         <td><%= seito.simei %></td>
         <td><%= link_to '参照', seito %></td>
         <td><%= link_to '編集', edit_seito_path(seito) %></td>
-        <td><%= link_to '削除', seito, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '削除', seito, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
       </tr>
     <% end %>
   </tbody>

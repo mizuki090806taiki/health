@@ -16,7 +16,7 @@
         <td><%= tikoku.riyuu %></td>
         <td><%= link_to '参照', tikoku %></td>
         <td><%= link_to '編集', edit_tikoku_path(tikoku) %></td>
-        <td><%= link_to '削除', tikoku, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '削除', tikoku, method: :delete, data: { confirm: "本当に削除しますか" } %></td>
       </tr>
     <% end %>
   </tbody>

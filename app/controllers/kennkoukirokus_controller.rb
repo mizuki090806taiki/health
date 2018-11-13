@@ -42,7 +42,7 @@ class KennkoukirokusController < ApplicationController
 
     respond_to do |format|
       if @kennkoukiroku.save
-        format.html { redirect_to @kennkoukiroku, notice: 'Kennkoukiroku was successfully created.' }
+        format.html { redirect_to @kennkoukiroku, notice: "健康記録を追加しました" }
         format.json { render :show, status: :created, location: @kennkoukiroku }
       else
         format.html { render :new }
@@ -56,7 +56,7 @@ class KennkoukirokusController < ApplicationController
   def update
     respond_to do |format|
       if @kennkoukiroku.update(kennkoukiroku_params)
-        format.html { redirect_to @kennkoukiroku, notice: 'Kennkoukiroku was successfully updated.' }
+        format.html { redirect_to @kennkoukiroku, notice: "健康記録を更新しました" }
         format.json { render :show, status: :ok, location: @kennkoukiroku }
       else
         format.html { render :edit }
@@ -70,7 +70,7 @@ class KennkoukirokusController < ApplicationController
   def destroy
     @kennkoukiroku.destroy
     respond_to do |format|
-      format.html { redirect_to kennkoukirokus_url, notice: 'Kennkoukiroku was successfully destroyed.' }
+      format.html { redirect_to kennkoukirokus_url, notice: "健康記録を削除しました" }
       format.json { head :no_content }
     end
   end

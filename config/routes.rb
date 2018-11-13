@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   root :to => 'home#top'
 
   post '/kennkoukirokus_search', to: 'kennkoukirokus#search'
+  post '/seito_gakunenn_select', to: 'seitos#search_nenndo'
 end

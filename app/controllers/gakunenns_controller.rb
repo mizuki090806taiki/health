@@ -28,7 +28,7 @@ class GakunennsController < ApplicationController
 
     respond_to do |format|
       if @gakunenn.save
-        format.html { redirect_to @gakunenn, notice: 'Gakunenn was successfully created.' }
+        format.html { redirect_to @gakunenn, notice: "学年を追加しました" }
         format.json { render :show, status: :created, location: @gakunenn }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class GakunennsController < ApplicationController
   def update
     respond_to do |format|
       if @gakunenn.update(gakunenn_params)
-        format.html { redirect_to @gakunenn, notice: 'Gakunenn was successfully updated.' }
+        format.html { redirect_to @gakunenn, notice: "学年を更新しました" }
         format.json { render :show, status: :ok, location: @gakunenn }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class GakunennsController < ApplicationController
   def destroy
     @gakunenn.destroy
     respond_to do |format|
-      format.html { redirect_to gakunenns_url, notice: 'Gakunenn was successfully destroyed.' }
+      format.html { redirect_to gakunenns_url, notice: "学年を削除しました" }
       format.json { head :no_content }
     end
   end
