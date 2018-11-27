@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>カウンセリングスケジュール</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>予約時間</th>
+      <th>メモ</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kaunsering_schedules.each do |kaunsering_schedule| %>
+      <tr>
+        <td><%= kaunsering_schedule.yoyakuzikan %></td>
+        <td><%= kaunsering_schedule.memo %></td>
+        <td><%= link_to '参照', kaunsering_schedule %></td>
+        <td><%= link_to '編集', edit_kaunsering_schedule_path(kaunsering_schedule) %></td>
+        <td><%= link_to '削除', kaunsering_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'カウンセリングスケジュール追加', new_kaunsering_schedule_path,{class: "btn btn-default btn-sm btn-block"} %>

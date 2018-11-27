@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kaunseringu_shedule_id: 1
+  seito_id: 1
+  memo: MyText
+  result: MyString
+
+two:
+  kaunseringu_shedule_id: 1
+  seito_id: 1
+  memo: MyText
+  result: MyString

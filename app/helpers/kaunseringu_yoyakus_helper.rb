@@ -1,0 +1,2 @@
+module KaunseringuYoyakusHelper
+end

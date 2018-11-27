@@ -22,6 +22,12 @@ class ApplicationController < ActionController::Base
       session[:username] = @current_user.name
       session[:userbanngou] = @current_user.banngou
       session[:userkengen] = @current_user.kengen
+      if  @current_user.kengen == 3
+      seito = Seito.find_by(banngou: @current_user.banngou)
+      session[:seitoid] = seito.id   
+      else
+        session[:seitoid] = nil   
+      end           
   end
 
   def sign_out

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Kaunseringu shedule:</strong>
+  <%= @kaunseringu_yoyaku.kaunsering_schedule_id %>
+</p>
+
+<p>
+  <strong>Seito:</strong>
+  <%= @kaunseringu_yoyaku.seito_id %>
+</p>
+
+<p>
+  <strong>Memo:</strong>
+  <%= @kaunseringu_yoyaku.memo %>
+</p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @kaunseringu_yoyaku.result %>
+</p>
+
+<%= link_to '編集', edit_kaunseringu_yoyaku_path(@kaunseringu_yoyaku) %> |
+<%= link_to '戻る', kaunseringu_yoyakus_path,{class: "btn btn-default btn-sm btn-block"} %>

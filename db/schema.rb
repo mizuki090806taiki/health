@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181106002032) do
+ActiveRecord::Schema.define(version: 20181113003452) do
 
   create_table "byouketus", force: :cascade do |t|
     t.string "riyuu"
@@ -31,6 +31,22 @@ ActiveRecord::Schema.define(version: 20181106002032) do
     t.integer "kumi"
     t.integer "ninnzuu"
     t.integer "nenndo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "kaunsering_schedules", force: :cascade do |t|
+    t.datetime "yoyakuzikan"
+    t.text "memo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "kaunseringu_yoyakus", force: :cascade do |t|
+    t.integer "kaunsering_schedule_id"
+    t.integer "seito_id"
+    t.text "memo"
+    t.string "result"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

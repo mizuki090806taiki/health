@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  yoyakuzikan: 2018-11-13 09:22:39
+  memo: MyText
+
+two:
+  yoyakuzikan: 2018-11-13 09:22:39
+  memo: MyText

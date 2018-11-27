@@ -26,7 +26,7 @@
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <% if signed_in? %>
-             <li><a><%= session[:userbanngou] %> <%= session[:username] %> [ <%= session[ :userkengen] %> ]</a></li>
+             <li><a><%= session[:userbanngou] %> <%= session[:username] %> [ <%= session[:userkengen] %> ] [ <%= session[:seitoid] %> ]</a></li>
              <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
           <% end %>
         </ul>
@@ -43,7 +43,9 @@
     <% end %>
 
     <%= yield %>
+    <% if signed_in? %>
     <p> <%= link_to 'メニュー', 'http://localhost:3000/home/top',{class: "btn btn-default btn-sm btn-block"} %> </p>
+    <% end %>
   </div>  
     
 

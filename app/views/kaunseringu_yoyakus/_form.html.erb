@@ -1,0 +1,48 @@
+<%= form_with(model: kaunseringu_yoyaku, local: true) do |form| %>
+  <% if kaunseringu_yoyaku.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kaunseringu_yoyaku.errors.count, "error") %> prohibited this kaunseringu_yoyaku from being saved:</h2>
+
+      <ul>
+      <% kaunseringu_yoyaku.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= form.label :カウンセリングスケジュール %>
+    <%= form.select :kaunsering_schedule_id, KaunseringSchedule.all.map { |k| [k.yoyakuzikan, k.id] },{include_blank: true},{class: "form-control"} %>
+  </div>
+
+  <% case session[:userkengen] %>
+   <% when 1 %>
+      <div class="field">
+         <%= form.label :生徒 %>
+         <%= form.select :seito_id, Seito.all.map { |s| [s.simei, s.id] },{include_blank: true},{class: "form-control"} %>
+         </div>
+
+    <% when 2 %>
+
+    <% when 3 %>
+      <div class="field">
+      <%= form.label :生徒 %>
+      <%= form.select :seito_id, Seito.where(id: session[:seitoid]).map { |s| [s.simei, s.id] },{include_blank: true},{class: "form-control"} %>
+      </div>
+    <% end %>   
+  
+  <div class="field">
+    <%= form.label :メモ %>
+    <%= form.text_area :memo, {id: :kaunseringu_yoyaku_memo,class: "form-control"} %>
+  </div>
+
+  <% if  @current_user.kengen == 1 %>
+  <div class="field">
+    <%= form.label :結果 %>
+    <%= form.select :result, [["予約確定待ち", "予約確定待ち"],["予約確定", "予約確定"], ["予約キャンセル", "予約キャンセル"]],{}, {class: "form-control"} %>
+  </div>
+  <% end %>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

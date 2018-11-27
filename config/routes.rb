@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :kaunseringu_yoyakus
+  resources :kaunsering_schedules
   get 'sessions/new'
 
   get     'login',  to: 'sessions#new'

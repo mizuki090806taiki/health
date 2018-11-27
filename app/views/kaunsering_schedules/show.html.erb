@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Yoyakuzikan:</strong>
+  <%= @kaunsering_schedule.yoyakuzikan %>
+</p>
+
+<p>
+  <strong>Memo:</strong>
+  <%= @kaunsering_schedule.memo %>
+</p>
+
+<%= link_to '編集', edit_kaunsering_schedule_path(@kaunsering_schedule) %> |
+<%= link_to '戻る', kaunsering_schedules_path,{class: "btn btn-default btn-sm btn-block"} %>

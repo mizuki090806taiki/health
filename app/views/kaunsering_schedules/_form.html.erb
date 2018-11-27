@@ -1,0 +1,27 @@
+<%= form_with(model: kaunsering_schedule, local: true) do |form| %>
+  <% if kaunsering_schedule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kaunsering_schedule.errors.count, "error") %> prohibited this kaunsering_schedule from being saved:</h2>
+
+      <ul>
+      <% kaunsering_schedule.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :予約時間 %>
+    <%= form.datetime_select :yoyakuzikan, id: :kaunsering_schedule_yoyakuzikan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :メモ %>
+    <%= form.text_area :memo, {id: :kaunsering_schedule_memo,class: "form-control"} %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

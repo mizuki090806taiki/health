@@ -44,34 +44,37 @@ Tikoku.create(riyuu: "その他")
 
 Seito.delete_all
 Seito.connection.execute("delete from sqlite_sequence where name='seitos'")
-Seito.create(gakunenn_id: 1,banngou: 3101,seibetu: "男",simei: "相田　恵一")
-Seito.create(gakunenn_id: 1,banngou: 3102,seibetu: "男",simei: "石原　竜也")
-Seito.create(gakunenn_id: 2,banngou: 3201,seibetu: "女",simei: "生田　桜")
-Seito.create(gakunenn_id: 2,banngou: 3202,seibetu: "男",simei: "今西　雄介")
-Seito.create(gakunenn_id: 3,banngou: 3301,seibetu: "女",simei: "池内　ひなの")
-Seito.create(gakunenn_id: 3,banngou: 3302,seibetu: "女",simei: "泉　葵")
-Seito.create(gakunenn_id: 4,banngou: 3401,seibetu: "女",simei: "乾　小春")
-Seito.create(gakunenn_id: 4,banngou: 3402,seibetu: "男",simei: "出口　海人")
-Seito.create(gakunenn_id: 4,banngou: 3403,seibetu: "男",simei: "臼井　勇気")
-Seito.create(gakunenn_id: 4,banngou: 3404,seibetu: "女",simei: "岩間　裕子")
-Seito.create(gakunenn_id: 4,banngou: 3404,seibetu: "女",simei: "上村　幸恵")
-Seito.create(gakunenn_id: 4,banngou: 3405,seibetu: "男",simei: "大澤　康弘")
-Seito.create(gakunenn_id: 4,banngou: 3406,seibetu: "男",simei: "古山　光輝")
-Seito.create(gakunenn_id: 4,banngou: 3407,seibetu: "女",simei: "北条　香澄")
-Seito.create(gakunenn_id: 4,banngou: 3408,seibetu: "男",simei: "吉田　健司")
-Seito.create(gakunenn_id: 4,banngou: 3409,seibetu: "女",simei: "武藤　香")
-Seito.create(gakunenn_id: 4,banngou: 3410,seibetu: "男",simei: "鳥居　虎太郎")
+Seito.create(gakunenn_id: 1,banngou: 20161101,seibetu: "男",simei: "相田　恵一")
+Seito.create(gakunenn_id: 1,banngou: 20161102,seibetu: "男",simei: "石原　竜也")
+Seito.create(gakunenn_id: 2,banngou: 20161201,seibetu: "女",simei: "生田　桜")
+Seito.create(gakunenn_id: 2,banngou: 20161202,seibetu: "男",simei: "今西　雄介")
+Seito.create(gakunenn_id: 3,banngou: 20161301,seibetu: "女",simei: "池内　ひなの")
+Seito.create(gakunenn_id: 3,banngou: 20161302,seibetu: "女",simei: "泉　葵")
+Seito.create(gakunenn_id: 4,banngou: 20161401,seibetu: "女",simei: "乾　小春")
+Seito.create(gakunenn_id: 4,banngou: 20161402,seibetu: "男",simei: "出口　海人")
+Seito.create(gakunenn_id: 4,banngou: 20161403,seibetu: "男",simei: "臼井　勇気")
+Seito.create(gakunenn_id: 4,banngou: 20161404,seibetu: "女",simei: "岩間　裕子")
+Seito.create(gakunenn_id: 4,banngou: 20161404,seibetu: "女",simei: "上村　幸恵")
+Seito.create(gakunenn_id: 4,banngou: 20161405,seibetu: "男",simei: "大澤　康弘")
+Seito.create(gakunenn_id: 4,banngou: 20161406,seibetu: "男",simei: "古山　光輝")
+Seito.create(gakunenn_id: 4,banngou: 20161407,seibetu: "女",simei: "北条　香澄")
+Seito.create(gakunenn_id: 4,banngou: 20161408,seibetu: "男",simei: "吉田　健司")
+Seito.create(gakunenn_id: 4,banngou: 20161409,seibetu: "女",simei: "武藤　香")
+Seito.create(gakunenn_id: 4,banngou: 20161410,seibetu: "男",simei: "鳥居　虎太郎")
 
 User.delete_all
 User.connection.execute("delete from sqlite_sequence where name='users'")
 User.create(name: "養護　太郎",banngou: 9999,password: "9999",password_confirmation: "9999",kengen: 1)
 User.create(name: "担任　太郎",banngou: 8888,password: "8888",password_confirmation: "8888",kengen: 2)
-User.create(name: "相田　恵一",banngou: 3101,password: "3101",password_confirmation: "3101",kengen: 3)
-User.create(name: "岩間　裕子",banngou: 3404,password: "3404",password_confirmation: "3404",kengen: 3)
-User.create(name: "吉田　健司",banngou: 3408,password: "3408",password_confirmation: "3408",kengen: 3)
-
-
-
+User.create(name: "相田　恵一",banngou: 20161101,password: "20161101",password_confirmation: "20161101",kengen: 3)
+User.create(name: "岩間　裕子",banngou: 20161404,password: "20161404",password_confirmation: "20161404",kengen: 3)
+User.create(name: "吉田　健司",banngou: 20161408,password: "20161408",password_confirmation: "20161408",kengen: 3)
+KaunseringSchedule.delete_all
+KaunseringSchedule.connection.execute("delete from sqlite_sequence where name='kaunsering_schedules'")
+KaunseringuYoyaku.delete_all
+KaunseringuYoyaku.connection.execute("delete from sqlite_sequence where name='kaunseringu_yoyakus'")
+Comment.delete_all
+Comment.connection.execute("delete from sqlite_sequence where name='comments'")
 
 
 
