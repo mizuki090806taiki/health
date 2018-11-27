@@ -56,7 +56,7 @@ class KennkoukirokusController < ApplicationController
   def update
     respond_to do |format|
       if @kennkoukiroku.update(kennkoukiroku_params)
-        format.html { redirect_to @kennkoukiroku, notice: "健康記録を更新しました" }
+        format.html { redirect_to  kennkoukirokus_path, notice: "健康記録を更新しました" }
         format.json { render :show, status: :ok, location: @kennkoukiroku }
       else
         format.html { render :edit }

@@ -1,11 +1,21 @@
 
 <p>
-  <strong>日付:</strong>
-  <%= @kennkoukiroku.hiduke %>
+<strong>日付:</strong>
+<%= @kennkoukiroku.hiduke %>
 </p>
 
 <p>
-  <strong>欠席:</strong>
+<strong>学年:</strong>
+<%= @kennkoukiroku.gakunenn.nenndo.to_s + "年度" + @kennkoukiroku.gakunenn.gakunenn.to_s + "年" + @kennkoukiroku.gakunenn.kumi.to_s + "組"  %>
+</p>
+
+<p>
+<strong>生徒:</strong>
+<%= @kennkoukiroku.seito.simei %>
+</p>
+
+<p>
+  <strong>出欠:</strong>
   <%= @kennkoukiroku.kesseki %>
 </p>
 
@@ -40,16 +50,6 @@
 <p>
   <strong>忌引:</strong>
   <%= @kennkoukiroku.kibiki %>
-</p>
-
-<p>
-  <strong>学年:</strong>
-  <%= @kennkoukiroku.gakunenn.nenndo.to_s + "年度" + @kennkoukiroku.gakunenn.gakunenn.to_s + "年" + @kennkoukiroku.gakunenn.kumi.to_s + "組"  %>
-</p>
-
-<p>
-  <strong>生徒:</strong>
-  <%= @kennkoukiroku.seito.simei %>
 </p>
 
 <%= link_to '編集', edit_kennkoukiroku_path(@kennkoukiroku) %>
