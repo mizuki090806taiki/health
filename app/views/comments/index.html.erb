@@ -22,7 +22,7 @@
         <td><%= comment.gakunenn.kumi %></td>
         <td><%= link_to '参照', comment %></td>
         <td><%= link_to '編集', edit_comment_path(comment) %></td>
-        <td><%= link_to '削除', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '削除', comment, method: :delete, data: { confirm: "本当に削除しますか？"} %></td>
       </tr>
     <% end %>
   </tbody>

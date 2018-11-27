@@ -28,7 +28,7 @@ class TikokusController < ApplicationController
 
     respond_to do |format|
       if @tikoku.save
-        format.html { redirect_to @tikoku, notice: 'Tikoku was successfully created.' }
+        format.html { redirect_to @tikoku, notice: "遅刻理由を作成しました" }
         format.json { render :show, status: :created, location: @tikoku }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class TikokusController < ApplicationController
   def update
     respond_to do |format|
       if @tikoku.update(tikoku_params)
-        format.html { redirect_to @tikoku, notice: 'Tikoku was successfully updated.' }
+        format.html { redirect_to @tikoku, notice: "遅刻理由を更新しました" }
         format.json { render :show, status: :ok, location: @tikoku }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class TikokusController < ApplicationController
   def destroy
     @tikoku.destroy
     respond_to do |format|
-      format.html { redirect_to tikokus_url, notice: 'Tikoku was successfully destroyed.' }
+      format.html { redirect_to tikokus_url, notice: "遅刻理由を削除しました" }
       format.json { head :no_content }
     end
   end

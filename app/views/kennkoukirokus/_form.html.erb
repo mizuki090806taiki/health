@@ -11,21 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :日付 %>
-    <%= form.date_select :hiduke, id: :kennkoukiroku_hiduke %>
-  </div>
+  <h2><td><%= @kennkoukiroku.hiduke %></td></h2>
+  
+
+  <% if kennkoukiroku.gakunenn_id.present? %>
+<table>
+  <tr>
+  <h2><%= kennkoukiroku.seito.banngou %>　<%= kennkoukiroku.seito.simei %></h2>
+  </tr>
+  </table>
+  <% else %>
+  <td></td>
+ <% end %>
+
+  <%= form.radio_button :kesseki,false, {:checked => true} %> 出席
+  <%= form.radio_button :kesseki,true %> 欠席
 
   <div class="field">
-    <%= form.label :欠席 %>
-    <%= form.check_box :kesseki, id: :kennkoukiroku_kesseki %>
-  </div>
-
-  <div class="field">
-    <%= form.label :病欠 %>
-    <%= form.select :byouketu_id, Byouketu.all.map { |b| [b.riyuu, b.id] },{include_blank: true},{class: "form-control" } %>
-  </div>
-
+  <%= form.label :出席の人は体調を選んでください／欠席の人は欠席理由を選んでください %>
+  <% Byouketu.all.each do |b| %>
+    <%= form.radio_button :byouketu_id,b.id %><%= b.riyuu %>
+    <% end %>
+</div>
+ <hr>
+ <div class="field">
+ <%= form.label :欠席の場合は以下の項目が該当する人のみ登録してください %>
+ </div>
+ 
   <div class="field">
     <%= form.label :事故欠 %>
     <%= form.text_field :zikoketu, {id: :kennkoukiroku_zikoketu,class: "form-control"} %>
@@ -45,16 +57,8 @@
     <%= form.label :忌引 %>
     <%= form.text_field :kibiki, {id: :kennkoukiroku_kibiki,class: "form-control"} %>
   </div>
-
-  <div class="field">
-    <%= form.label :学年 %>
-    <%= form.select :gakunenn_id, Gakunenn.all.map { |g| [g.nenndo.to_s + "年度" + g.gakunenn.to_s + "年" + g.kumi.to_s + "組" ,g.id] },{}, {class: "form-control"} %>
-  </div>
-
-  <div class="field">
-    <%= form.label :生徒 %>
-    <%= form.select :seito_id, Seito.all.map { |s| [ s.banngou.to_s + s.simei, s.id] },{}, {class: "form-control"} %>
-  </div>
+   <hr>
+  
 
   <div class="actions">
     <%= form.submit %>

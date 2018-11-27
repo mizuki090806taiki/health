@@ -16,7 +16,7 @@
         <td><%= byouketu.riyuu %></td>
         <td><%= link_to '参照', byouketu %></td>
         <td><%= link_to '編集', edit_byouketu_path(byouketu) %></td>
-        <td><%= link_to '削除', byouketu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '削除', byouketu, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
       </tr>
     <% end %>
   </tbody>

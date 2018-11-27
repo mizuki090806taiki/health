@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"></p>
 
 <h1>健康記録</h1>
 
@@ -31,7 +31,7 @@
       <th>番号</th>
       <th>性別</th>
       <th>氏名</th>
-      <th>欠席</th>
+      <th>出欠</th>
       <th>病欠</th>
       <th>事故欠</th>
       <th>出席停止</th>
@@ -50,7 +50,11 @@
         <td><%= kennkoukiroku.seito.banngou %></td>
         <td><%= kennkoukiroku.seito.seibetu %></td>
         <td><%= kennkoukiroku.seito.simei %></td>
-        <td><%= kennkoukiroku.kesseki %></td>
+       <% if kennkoukiroku.kesseki == true %>
+        <td><font color=red><%= "欠席" %></td>
+        <% else %>
+        <td><font color=blue><%= "出席" %></td>
+      <% end %>
        <% if kennkoukiroku.byouketu_id.present? %>
         <td><%= kennkoukiroku.byouketu.riyuu %></td>
         <% else %>
@@ -66,12 +70,12 @@
         <td><%= kennkoukiroku.kibiki %></td>
         <td><%= link_to '参照', kennkoukiroku %></td>
         <td><%= link_to '編集', edit_kennkoukiroku_path(kennkoukiroku) %></td>
-        <td><%= link_to '削除', kennkoukiroku, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '削除', kennkoukiroku, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to '健康記録追加', new_kennkoukiroku_path,{class: "btn btn-default btn-sm btn-block"} %>
+
+
