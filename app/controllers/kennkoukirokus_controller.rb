@@ -16,8 +16,10 @@ class KennkoukirokusController < ApplicationController
     
     if session[:kennkoukiroku_search_gakunenn] == nil
      @kennkoukirokus = {}
+     @comments = {}
     else
      @kennkoukirokus = Kennkoukiroku.where("gakunenn_id = ? and hiduke = ? ", session[:kennkoukiroku_search_gakunenn],@hiduke)
+     @comments = Comment.where("gakunenn_id = ? and hiduke = ? ", session[:kennkoukiroku_search_gakunenn],@hiduke).order(created_at: :desc)
    end
   end
 
