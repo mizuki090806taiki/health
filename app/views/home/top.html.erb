@@ -1,4 +1,28 @@
 
+<table>
+  <% if @k >= 1 %>
+  <h2> 今日の欠席人数は<font color=red><%= @k %>人</font>です</h2>
+  <% else %>
+  <h2>今日の欠席人数は<font color=blue><%= @k %>人</font>です</h2>
+  <% end %>
+</table>
+
+<table class="table table-bordered">
+<tr>
+<% Byouketu.all.each do |b| %>
+<td align="center"><b><%=  b.riyuu %></b></td>
+<% end %>
+</tr>
+
+
+<tbody>
+<tr>
+<% @b.each do |b| %>
+<td align="center"><%= @ninzu[b.id] %></td>
+<% end %>
+</tr>
+</tbody>
+</table>
 
 <%= link_to '生徒一覧', seitos_path,{class: "btn btn-default btn-sm btn-block"} %>
 <%= link_to '学年', gakunenns_path,{class: "btn btn-default btn-sm btn-block"} %>
