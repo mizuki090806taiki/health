@@ -6,7 +6,7 @@
   <p>
   学年
   <br>
-  <%= select_tag 'kennkoukiroku_search[gakunenn]', options_for_select(Gakunenn.all.map { |g| [g.nenndo.to_s + "年度" + g.gakunenn.to_s + "年" + g.kumi.to_s + "組" ,g.id] }) %>
+  <%= select_tag 'kennkoukiroku_search[gakunenn]', options_for_select(Gakunenn.all.map { |g| [g.nenndo.to_s + "年度" + g.gakunenn.to_s + "年" + g.kumi.to_s + "組" ,g.id] },session[:kennkoukiroku_search_gakunenn]) %>
   <%= submit_tag '検索' %>
   </p>
 <% end %>
@@ -75,7 +75,23 @@
     <% end %>
   </tbody>
 </table>
+<p><b>コメント</b></p>
+<%= form_tag('/comments') do %>
+  <%= hidden_field :comment, :hiduke, :value =>  @hiduke %>
+  <%= hidden_field :comment, :gakunenn_id, :value => session[:kennkoukiroku_search_gakunenn] %>
+  <p>
+  <%= text_area :comment, :comment, :size => "40x10" %>
+  <%= submit_tag "コメント追加" %>
+  </p>
+  <% end %>
 
+  <% @comments.each do |c| %>
+  <p>
+  <%= c.created_at.strftime('%Y/%m/%d %H:%M') %>
+  <br>
+  <%= simple_format(c.comment) %>
+  </p>
+<% end %>
 
 
 

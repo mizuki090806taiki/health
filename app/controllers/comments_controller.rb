@@ -28,10 +28,10 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: "コメントを追加しました" }
+        format.html { redirect_to kennkoukirokus_path, notice: "コメントを追加しました" }
         format.json { render :show, status: :created, location: @comment }
       else
-        format.html { render :new }
+        format.html { redirect_to kennkoukirokus_path, notice: "コメントは必須です" }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
