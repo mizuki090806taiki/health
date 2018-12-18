@@ -1,4 +1,3 @@
-
 <table>
   <% if @k >= 1 %>
   <h2> 今日の欠席人数は<font color=red><%= @k %>人</font>です</h2>
@@ -20,6 +19,23 @@
 <% @b.each do |b| %>
 <td align="center"><%= @ninzu[b.id] %></td>
 <% end %>
+</tr>
+
+<tr>
+<% @b.each do |b| %>
+<td align="center">
+<% if @ninzu[b.id] == 0 %>
+   <%= image_tag "genkitomei.gif", :size => "35x35" %>
+<% end %>
+<% if @ninzu[b.id] >= 1 && @ninzu[b.id] <= 9 %>
+   <%= image_tag "fututomei.gif", :size => "35x35" %>
+<% end %>
+<% if @ninzu[b.id] >= 10 %>
+   <%= image_tag "byoukitomei.gif", :size => "40x40" %>
+<% end %>
+</td>
+<% end %>
+
 </tr>
 </tbody>
 </table>
