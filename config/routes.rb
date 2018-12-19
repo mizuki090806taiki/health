@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :hokensitu_usesheets
   resources :kaunseringu_yoyakus
   resources :kaunsering_schedules
   get 'sessions/new'

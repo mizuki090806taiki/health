@@ -1,0 +1,77 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  seito_id: 1
+  raishitu_time: 2018-12-19 11:33:01
+  bukatu_flg: false
+  bukatu: MyString
+  kyoka: MyString
+  kyokatannin: MyString
+  naika_riyuu_sonota: MyString
+  geka_riyuu_sonota: MyString
+  geka_detail_bui: MyString
+  geka_detail_time: MyString
+  geka_detail_place: MyString
+  geka_detail: MyText
+  bad_start: MyString
+  bad_jigen: 1
+  taion: MyString
+  myakuhaku: MyString
+  ketuatu: MyString
+  howdo_sonota: MyString
+  sleep: 2018-12-19 11:33:01
+  wakeup: 2018-12-19 11:33:01
+  good_sleep: false
+  breakfast: false
+  defecation: false
+  worry: false
+  worry_sonota: MyString
+  go_class: 2018-12-19 11:33:01
+  go_rest_from: 2018-12-19 11:33:01
+  go_rest_to: 2018-12-19 11:33:01
+  go_rest_jigen_from: 1
+  go_rest_jigen_to: 1
+  go_home: 2018-12-19 11:33:01
+  go_home_tel: MyString
+  go_hospital: 2018-12-19 11:33:01
+  go_hospital_name: MyString
+  go_consultation: false
+  go_sonota: MyText
+
+two:
+  seito_id: 1
+  raishitu_time: 2018-12-19 11:33:01
+  bukatu_flg: false
+  bukatu: MyString
+  kyoka: MyString
+  kyokatannin: MyString
+  naika_riyuu_sonota: MyString
+  geka_riyuu_sonota: MyString
+  geka_detail_bui: MyString
+  geka_detail_time: MyString
+  geka_detail_place: MyString
+  geka_detail: MyText
+  bad_start: MyString
+  bad_jigen: 1
+  taion: MyString
+  myakuhaku: MyString
+  ketuatu: MyString
+  howdo_sonota: MyString
+  sleep: 2018-12-19 11:33:01
+  wakeup: 2018-12-19 11:33:01
+  good_sleep: false
+  breakfast: false
+  defecation: false
+  worry: false
+  worry_sonota: MyString
+  go_class: 2018-12-19 11:33:01
+  go_rest_from: 2018-12-19 11:33:01
+  go_rest_to: 2018-12-19 11:33:01
+  go_rest_jigen_from: 1
+  go_rest_jigen_to: 1
+  go_home: 2018-12-19 11:33:01
+  go_home_tel: MyString
+  go_hospital: 2018-12-19 11:33:01
+  go_hospital_name: MyString
+  go_consultation: false
+  go_sonota: MyText

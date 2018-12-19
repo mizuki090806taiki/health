@@ -16,7 +16,7 @@
   <tbody>
     <% @kaunseringu_yoyakus.each do |kaunseringu_yoyaku| %>
       <tr>
-        <td><%= kaunseringu_yoyaku.kaunsering_schedule.yoyakuzikan%></td>
+        <td><%= kaunseringu_yoyaku.kaunsering_schedule.yoyakuzikan.strftime('%Y/%m/%d %H:%M')%></td>
         <td><%= kaunseringu_yoyaku.seito.simei %></td>
         <td><%= kaunseringu_yoyaku.memo %></td>
         <td><%= kaunseringu_yoyaku.result %></td>
