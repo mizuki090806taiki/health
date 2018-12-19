@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'summary/result',as: 'sumresult'
+
   resources :kaunseringu_yoyakus
   resources :kaunsering_schedules
   get 'sessions/new'

@@ -1,0 +1,52 @@
+
+<h1>集計記録</h1><th>
+
+<table class="table">
+<tr>
+     <td><%= link_to "前日", sumresult_path(select_date: @hiduke-1) %></td>
+     <td align="center", style="font-size : 25px;"><%= @hiduke %><%= @youbi %></td>
+     <td><%= link_to "今日に戻る", sumresult_path %></td>
+     <td align="right"><%= link_to "翌日", sumresult_path(select_date: @hiduke+1) %></td>
+
+</tr>
+
+</table>
+
+<table  class="table table-bordered">
+
+<tr>
+<th>学年</th>
+<th>組</th>
+<th>欠席人数</th>
+<% Byouketu.all.order(:id).each do |b| %>
+<th><%=  b.riyuu %></th>
+<% end %>
+</tr>
+
+<tbody>
+<% @gakunenns.each_with_index do |gakunenn,i| %>  
+<tr> 
+<td align="center"><%= gakunenn.gakunenn %></td>
+<td align="center"><%= gakunenn.kumi %></td>
+<% if @k[i] >= 1 %>
+ <td align="right"><font color=red><%= @k[i] %></font></td>
+<% else %>
+<td align="right"><%= @k[i] %></td>
+<% end %>
+<% @byouketu.each_with_index do |b,j| %>
+    <% if @ninzu[i][j] >= 1 %>
+    <td align="right"><font color=red><%= @ninzu[i][j] %></font></td>
+   <% else %>
+   <td align="right"><%= @ninzu[i][j] %></td>
+   <% end %>
+
+
+<% end %>
+
+</tr>
+<% end %>
+</tbody>
+
+
+
+</table>

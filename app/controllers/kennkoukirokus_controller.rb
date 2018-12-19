@@ -1,6 +1,6 @@
 class KennkoukirokusController < ApplicationController
   before_action :set_kennkoukiroku, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /kennkoukirokus
   # GET /kennkoukirokus.json
   def index
