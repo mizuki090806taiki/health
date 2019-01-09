@@ -12,7 +12,7 @@
   <% end %>
   <div class="field">
     <%= form.label :カウンセリングスケジュール %>
-    <%= form.select :kaunsering_schedule_id, KaunseringSchedule.all.map { |k| [k.yoyakuzikan, k.id] },{include_blank: true},{class: "form-control"} %>
+    <%= form.select :kaunsering_schedule_id, KaunseringSchedule.all.map { |k| [k.yoyakuzikan.strftime('%Y/%m/%d %H:%M'), k.id] },{include_blank: true},{class: "form-control"} %>
   </div>
 
   <% case session[:userkengen] %>

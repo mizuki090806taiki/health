@@ -1,0 +1,197 @@
+<%= form_with(model: hokensitu_usesheet, local: true) do |form| %>
+  <% if hokensitu_usesheet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hokensitu_usesheet.errors.count, "error") %> prohibited this hokensitu_usesheet from being saved:</h2>
+
+      <ul>
+      <% hokensitu_usesheet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :生徒 %>
+    <%= form.number_field :seito_id, {id: :hokensitu_usesheet_seito_id,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :来室日時 %>
+    <%= form.datetime_select :raishitu_time, {id: :hokensitu_usesheet_raishitu_time,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :部活動入部有無 %>
+    <%= form.check_box :bukatu_flg, id: :hokensitu_usesheet_bukatu_flg %>
+  </div>
+
+  <div class="field">
+    <%= form.label :部活 %>
+    <%= form.text_field :bukatu, {id: :hokensitu_usesheet_bukatu,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :教科名 %>
+    <%= form.text_field :kyoka, {id: :hokensitu_usesheet_kyoka,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :教科担当 %>
+    <%= form.text_field :kyokatannin, {id: :hokensitu_usesheet_kyokatannin,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :内科　理由（その他） %>
+    <%= form.text_field :naika_riyuu_sonota, {id: :hokensitu_usesheet_naika_riyuu_sonota,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :外科　理由（その他） %>
+    <%= form.text_field :geka_riyuu_sonota, {id: :hokensitu_usesheet_geka_riyuu_sonota,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :外科　部位 %>
+    <%= form.text_field :geka_detail_bui, {id: :hokensitu_usesheet_geka_detail_bui,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :外科　状況（時間） %>
+    <%= form.text_field :geka_detail_time, {id: :hokensitu_usesheet_geka_detail_time,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :外科　状況（場所） %>
+    <%= form.text_field :geka_detail_place, {id: :hokensitu_usesheet_geka_detail_place,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :外科　状況 %>
+    <%= form.text_area :geka_detail, {id: :hokensitu_usesheet_geka_detail,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :具合が悪くなった日 %>
+    <%= form.text_field :bad_start, {id: :hokensitu_usesheet_bad_start,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :具合が悪うなった時限 %>
+    <%= form.number_field :bad_jigen, {id: :hokensitu_usesheet_bad_jigen,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :体温 %>
+    <%= form.text_field :taion, {id: :hokensitu_usesheet_taion,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :脈拍 %>
+    <%= form.text_field :myakuhaku, {id: :hokensitu_usesheet_myakuhaku,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :血圧 %>
+    <%= form.text_field :ketuatu, {id: :hokensitu_usesheet_ketuatu,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :どうしたい（その他） %>
+    <%= form.text_field :howdo_sonota, {id: :hokensitu_usesheet_howdo_sonota,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :就寝時間 %>
+    <%= form.datetime_select :sleep, id: :hokensitu_usesheet_sleep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :起床時間 %>
+    <%= form.datetime_select :wakeup, id: :hokensitu_usesheet_wakeup %>
+  </div>
+
+  <div class="field">
+    <%= form.label :よく眠れた %>
+    <%= form.check_box :good_sleep, id: :hokensitu_usesheet_good_sleep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :朝食を食べた %>
+    <%= form.check_box :breakfast, id: :hokensitu_usesheet_breakfast %>
+  </div>
+
+  <div class="field">
+    <%= form.label :排便 %>
+    <%= form.check_box :defecation, id: :hokensitu_usesheet_defecation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :心配事 %>
+    <%= form.check_box :worry, id: :hokensitu_usesheet_worry %>
+  </div>
+
+  <div class="field">
+    <%= form.label :心配事（その他） %>
+    <%= form.text_field :worry_sonota, {id: :hokensitu_usesheet_worry_sonota,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :教室 %>
+    <%= form.datetime_select :go_class, id: :hokensitu_usesheet_go_class %>
+  </div>
+
+  <div class="field">
+    <%= form.label :休養（いつから） %>
+    <%= form.datetime_select :go_rest_from, id: :hokensitu_usesheet_go_rest_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :休養（いつまで） %>
+    <%= form.datetime_select :go_rest_to, id: :hokensitu_usesheet_go_rest_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :休養時限（いつから） %>
+    <%= form.number_field :go_rest_jigen_from, {id: :hokensitu_usesheet_go_rest_jigen_from,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :休養時限（いつまで） %>
+    <%= form.number_field :go_rest_jigen_to, {id: :hokensitu_usesheet_go_rest_jigen_to,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :早退 %>
+    <%= form.datetime_select :go_home, id: :hokensitu_usesheet_go_home %>
+  </div>
+
+  <div class="field">
+    <%= form.label :早退（保護者連絡） %>
+    <%= form.text_field :go_home_tel, {id: :hokensitu_usesheet_go_home_tel,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :受診 %>
+    <%= form.datetime_select :go_hospital, id: :hokensitu_usesheet_go_hospital %>
+  </div>
+
+  <div class="field">
+    <%= form.label :受診先 %>
+    <%= form.text_field :go_hospital_name, {id: :hokensitu_usesheet_go_hospital_name,class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :相談 %>
+    <%= form.check_box :go_consultation, id: :hokensitu_usesheet_go_consultation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :その他 %>
+    <%= form.text_area :go_sonota, {id: :hokensitu_usesheet_go_sonota,class: "form-control"} %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

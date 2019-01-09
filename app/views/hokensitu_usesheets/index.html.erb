@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hokensitu Usesheets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>生徒</th>
+      <th>来室日時</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hokensitu_usesheets.each do |hokensitu_usesheet| %>
+      <tr>
+        <td><%= hokensitu_usesheet.seito_id %></td>
+        <td><%= hokensitu_usesheet.raishitu_time %></td>
+        <td><%= hokensitu_usesheet.bukatu_flg %></td>
+        <td><%= hokensitu_usesheet.bukatu %></td>
+        <td><%= hokensitu_usesheet.kyoka %></td>
+        <td><%= hokensitu_usesheet.kyokatannin %></td>
+        <td><%= hokensitu_usesheet.naika_riyuu_sonota %></td>
+        <td><%= hokensitu_usesheet.geka_riyuu_sonota %></td>
+        <td><%= hokensitu_usesheet.geka_detail_bui %></td>
+        <td><%= hokensitu_usesheet.geka_detail_time %></td>
+        <td><%= hokensitu_usesheet.geka_detail_place %></td>
+        <td><%= hokensitu_usesheet.geka_detail %></td>
+        <td><%= hokensitu_usesheet.bad_start %></td>
+        <td><%= hokensitu_usesheet.bad_jigen %></td>
+        <td><%= hokensitu_usesheet.taion %></td>
+        <td><%= hokensitu_usesheet.myakuhaku %></td>
+        <td><%= hokensitu_usesheet.ketuatu %></td>
+        <td><%= hokensitu_usesheet.howdo_sonota %></td>
+        <td><%= hokensitu_usesheet.sleep %></td>
+        <td><%= hokensitu_usesheet.wakeup %></td>
+        <td><%= hokensitu_usesheet.good_sleep %></td>
+        <td><%= hokensitu_usesheet.breakfast %></td>
+        <td><%= hokensitu_usesheet.defecation %></td>
+        <td><%= hokensitu_usesheet.worry %></td>
+        <td><%= hokensitu_usesheet.worry_sonota %></td>
+        <td><%= hokensitu_usesheet.go_class %></td>
+        <td><%= hokensitu_usesheet.go_rest_from %></td>
+        <td><%= hokensitu_usesheet.go_rest_to %></td>
+        <td><%= hokensitu_usesheet.go_rest_jigen_from %></td>
+        <td><%= hokensitu_usesheet.go_rest_jigen_to %></td>
+        <td><%= hokensitu_usesheet.go_home %></td>
+        <td><%= hokensitu_usesheet.go_home_tel %></td>
+        <td><%= hokensitu_usesheet.go_hospital %></td>
+        <td><%= hokensitu_usesheet.go_hospital_name %></td>
+        <td><%= hokensitu_usesheet.go_consultation %></td>
+        <td><%= hokensitu_usesheet.go_sonota %></td>
+        <td><%= link_to '参照', hokensitu_usesheet %></td>
+        <td><%= link_to '編集', edit_hokensitu_usesheet_path(hokensitu_usesheet) %></td>
+        <td><%= link_to '削除', hokensitu_usesheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '保健室利用票追加', new_hokensitu_usesheet_path %>

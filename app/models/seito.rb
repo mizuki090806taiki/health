@@ -1,6 +1,7 @@
 class Seito < ApplicationRecord
  has_many :kennkoukirokus
  has_many :kaunseringu_yoyakus
+ has_many :hokensitu_usesheets
  belongs_to :gakunenn
 
  validates :gakunenn_id,presence:true
